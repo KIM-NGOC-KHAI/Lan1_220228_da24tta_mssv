@@ -4,6 +4,8 @@ void nhapsotien(float a[], int n);
 void xuatsotien(float a[], int n);
 void tinhtongvathongke(float a[], int n);
 void phantichchitieu(float a[], int n);
+void saptang(float a[], int n);
+void xuatMang1(float a[], int n);
 
 int main(){
 	float A[Day] = {0};
@@ -15,6 +17,8 @@ int main(){
 	printf("\n");
 	phantichchitieu(A, n);
 	printf("\n");
+	sapTang(A, n);
+	xuatmang1(A, n);
 	
 	
 	return 0;
@@ -36,6 +40,25 @@ void phantichchitieu(float a[], int n){
 	scanf("%.2f", &X);
 	printf("\nSo ngay co chi tieu vuot muc: %d", demvuot);
 	printf("\nSo ngay co chi tieu thap hon hoac bang: %d", demkhongvuot);
+}
+// sap xep
+void sapTang (float a[], int n){
+	float t;
+	for (int i=0 ; i<n-1 ; i++){
+		for (int j=i+1 ; j<n ; j++){
+			if(a[i]>a[j]){
+				t=a[j];
+				a[j]=a[i];
+				a[i]=t;
+			}
+		}
+	}
+}
+void xuatMang1 (float a[], int n){
+	for (int i=0 ; i<n ; i++)
+	{
+		printf("%8.2f", a[i]);
+	}
 }
 // tinh tong va thong ke 
 void tinhtongvathongke(float a[], int n){
