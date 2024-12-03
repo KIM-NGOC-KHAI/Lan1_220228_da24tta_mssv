@@ -44,8 +44,8 @@ void phantichchitieu(float a[], int n){
 // sap xep
 void sapTang (float a[], int n){
 	float t;
-	for (int i=0 ; i<n-1 ; i++){
-		for (int j=i+1 ; j<n ; j++){
+	for (int i = 0 ; i < Day - 1 ; i++){
+		for (int j = i + 1 ; j < Day ; j++){
 			if(a[i]>a[j]){
 				t=a[j];
 				a[j]=a[i];
@@ -55,7 +55,7 @@ void sapTang (float a[], int n){
 	}
 }
 void xuatMang1 (float a[], int n){
-	for (int i=0 ; i<n ; i++)
+	for (int i  =0 ; i < Day ; i++)
 	{
 		printf("%8.2f", a[i]);
 	}
